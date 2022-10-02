@@ -8,6 +8,7 @@ After cloning the repository, write next commands in cmd:
 
 # Contents
 1. issue_05.py          - executable file with tests
-2. htmlcov              - folder with html coverage report
-3. issue_05_result.txt  - text file with testing results
-4. README.md            - readme file  
+2. what_is_year_now.py  - file with tested function
+3. htmlcov              - folder with html coverage report
+4. issue_05_result.txt  - text file with testing results
+5. README.md            - readme file  
