@@ -4,6 +4,7 @@ import pytest
 
 
 def test_year_format_1():
+    """Testing first date format."""
     with patch('what_is_year_now.json.load') as mocked_case:
         mocked_case.return_value = {'currentDateTime': '2022-03-01'}
         assert what_is_year_now() == 2022
@@ -11,6 +12,7 @@ def test_year_format_1():
 
 
 def test_year_format_2():
+    """Testing second date format."""
     with patch('what_is_year_now.json.load') as mocked_case:
         mocked_case.return_value = {'currentDateTime': '01.03.2019'}
         assert what_is_year_now() == 2019
@@ -18,6 +20,7 @@ def test_year_format_2():
 
 
 def test_year_exception():
+    """Testing exception raisng with wrong date format."""
     with patch('what_is_year_now.json.load') as mocked_case:
         mocked_case.return_value = {'currentDateTime': '01-2022-01'}
         with pytest.raises(ValueError):
